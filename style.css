@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Qwitcher+Grypen:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ms+Madi&family=Qwitcher+Grypen:wght@700&display=swap');
+
+body{
+	background: black;
+	color: #ffffff;
+
+}
+.nav{
+	background: black;
+	height: 80px;
+	width: 100%;
+
+}
+
+
+.nav_container{
+	display: flex;
+	height: 100%;
+	width: 90%;
+	margin:  0 auto;
+	justify-content: space-between;
+	align-items: center;
+
+}
+.nav_logo{
+	width: 160px;
+}
+
+.nav_menu{
+	display: grid;
+	grid-auto-flow: column;
+	gap: 3em;
+}
+.nav_img{
+	width: 50px;
+}
+
+a{
+	font-family: montserrat;
+}
+.nav_item{
+	color:  #fff;
+	text-decoration: none;
+	--clippy: polygon(0 0, 0 0, 0 100%, 0% 100%);
+	transition: clip.path .3s;
+}
+.nav_item:after{
+	content: "";
+	display: block;
+	background: #fff;
+	width: 90%;
+	margin-top: 3px;
+	height: 3px;
+	clip-path: var(--clippy);
+	transition: clip-path .3s;
+}
+.nav_item:hover{
+	--clippy: polygon(0 0, 100% 0, 100% 100%, 0 100%);;
+}
+
+.nav_label, .nav_input{
+	display: none;
+}
+
+
+.principal_container{
+	margin-top: 0px;
+	text-align: center;
+
+}
+
+h1{
+	font-family: 'Qwitcher Grypen', cursive;
+	font-size: 10em;
+	text-align: center;
+	margin:  0 auto;
+}
+h2{
+	font-family: 'Montserrat', sans-serif;
+	font-size: 2em;
+	text-align: center;
+	margin: 0 auto;
+}
+.jesus{
+	font-family: 'Montserrat', sans-serif;
+	color: #FF0000;
+}
+p{
+	width: 70%;
+	text-align: center;
+	margin: 30px auto 50px auto;
+	line-height: 3em;
+	font-family: 'Montserrat', sans-serif;
+}
+.parraf{
+	color: #ff0000;
+}
+
+.btn {
+  background: #ff0000;
+  background-image: -webkit-linear-gradient(top, #ff0000, #AF0000);
+  background-image: -moz-linear-gradient(top, #ff0000, #AF0000);
+  background-image: -ms-linear-gradient(top, #ff0000, #AF0000);
+  background-image: -o-linear-gradient(top, #ff0000, #AF0000);
+  background-image: linear-gradient(to bottom, #ff0000, #AF0000);
+  -webkit-border-radius: 27;
+  -moz-border-radius: 27;
+  border-radius: 27px;
+  font-family: montserrat;
+  color: #ffffff;
+  font-size: 20px;
+  padding: 15px 24px 15px 24px;
+  text-decoration: none;
+
+}
+
+.btn:hover {
+  background: #AF0000;
+  text-decoration: none;
+}
+
+.bottom-container{
+	margin-top: 48px;
+	color:  white;
+	height: 100px;
+	text-align: center;
+	
+}
+.footer-link{
+	font-size: 15px;
+	margin: auto 100px auto 100px;
+	text-decoration: none;
+	color: #ffffff;
+
+}
+.copyright{
+	margin-bottom: 0;
+	color: #EAF6F6;
+	font-size: 0.75rem;
+}
+
+
+@media (max-width: 700px){
+	.nav{
+		height: 120px;
+	}
+	.nav_label{
+		display: block;
+		cursor: pointer;
+	}
+
+	.nav_menu{
+		position: fixed;
+		top: 80px;
+		bottom: 0;
+		background: black;
+		width: 100%;
+		left: 0;
+		display: flex;
+		justify-content: space-evenly;
+		flex-direction: column;
+		align-items: center;
+		clip-path: circle(0 at center);
+		transition: clip-path .5s;
+	}
+	.nav_logo{
+		width: 6.5em;
+		padding-bottom: 1em;
+	}
+
+	.nav_input:checked + .nav_menu{
+		clip-path: circle(100% at center);
+	}
+	h1{
+	font-family: 'Qwitcher Grypen', cursive;
+	font-size: 8em;
+	text-align: center;
+	margin:  0 auto;
+	}
+	h2{
+	font-family: 'Montserrat', sans-serif;
+	font-size: 1.5em;
+	text-align: center;
+	margin: 0 auto;
+	}
+	.jesus{
+	font-family: 'Montserrat', sans-serif;
+	font-size: 1em;
+	color: #FF0000;
+	}
+	p{
+	font-size: o;
+	width: 70%;
+	text-align: justify;
+	margin: 50px auto 80px;
+	line-height: 1.5em;
+	}
+	.principal_container{
+	margin-top: 3.5em;
+	text-align: center;
+	}
+	.bottom-container{
+	margin-top: 40px;
+	text-align: center}
+	.copyright{
+	margin-bottom: 0;
+	color: #fff;
+	font-size: 0.75rem;
+	text-align: center;
+	}
+
+
+	.btn {
+  background: #ff0000;
+  background-image: -webkit-linear-gradient(top, #ff0000, #AF0000);
+  background-image: -moz-linear-gradient(top, #ff0000, #AF0000);
+  background-image: -ms-linear-gradient(top, #ff0000, #AF0000);
+  background-image: -o-linear-gradient(top, #ff0000, #AF0000);
+  background-image: linear-gradient(to bottom, #ff0000, #AF0000);
+  -webkit-border-radius: 27;
+  -moz-border-radius: 27;
+  border-radius: 27px;
+  font-family: montserrat;
+  color: #ffffff;
+  font-size: 15px;
+  padding: 15px 24px 15px 24px;
+  text-decoration: none;}
+
+	.btn:hover {
+  background: #AF0000;
+  text-decoration: none;}
+  .footer-link{
+	font-size: 15px;
+	margin: auto 50px auto 50px;
+	text-decoration: none;
+	color: #ffffff;}
+
+}
+
+
+
+
+
+
+
+
